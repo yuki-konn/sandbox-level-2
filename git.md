@@ -80,8 +80,10 @@ git push
 ### DELETE SOURCE CONTROL
 ```
 ls -a
-rm -r .git
+rm -rf .git
 ```
+
+`-rf` means recursive and force
 
 ### COMMAND DESCRIPTIONS
 1. git init
