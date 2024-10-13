@@ -85,6 +85,23 @@ rm -rf .git
 
 `-rf` means recursive and force
 
+### VIEW BRANCHES
+
+`git branch`
+
+### CREATE A BRANCH
+
+`git branch whatYouWantToDo`
+
+### SWITCH TO A BRANCH
+
+`git switch myBranch`
+
+### MERGE CHANGES
+
+1. Switch to the branch that will absorb the changes. Example `git switch main`
+2. `git merge myBranch`
+
 ### COMMAND DESCRIPTIONS
 1. git init
    - Initializes source control 
