@@ -113,3 +113,57 @@ rm -rf .git
    - Sets the origin
 5. git push --set-upstream origin main
    - Pushes files to GitHub and makes origin and main the default options
+
+---
+
+### MERGE TEST
+
+1. `git init`
+2. `git config user.name "myUserName"`
+3. `git config user.email "my@email.com"`
+4. `touch index.html`
+5. `git add .`
+6. `git commit -m "added files"`
+7. Create a GitHub repository called merge-test
+8. `git remote add origin https://github.com/yuki-konn/merge-test.git`
+9. `git push --set-upstream origin main`
+10. `git branch myBranch`
+11. `git switch myBranch`
+12. Add `<p>Hello World!</p>` to index.html
+13. Save the Changes CTRL + S
+14. `git add .`
+15. `git commit -m "updated files"`
+16. `git switch main`
+17. Change the history from `Auto` to `All`.
+18. `git merge myBranch`
+19. `git push`
+20. git switch myBranch
+21. Add `<p>Amazing World!</p>` to index.html
+22. Save the Changes CTRL + S
+23. `git add .`
+24. `git commit -m "updated files"`
+25. `git switch main`
+26. `touch about.html`
+27. `git add .`
+28. `git commit -m "added a file"`
+29. `git merge myBranch`
+30. Approve the merge by closing the merge editor or the VIM editor (type :qa and ENTER)
+31. `git rebase myBranch`
+32. `git push`
+33. `git switch myBranch`
+34. `git rebase main`
+35. Add `<h1>About Page</h1>` to about.html
+36. Save the changes CTRL + S
+37. `git add .`
+38. `git commit -m "added heading"`
+39. `git switch main`
+40. Add `<h2>About Page</h2>` to about.html
+41. Save the changes CTRL + S
+42. `git add .`
+43. `git commit -m "added heading"`
+44. `git merge myBranch`
+45. Select a resolution.
+46. Save the changes CTRL + S
+47. `git add .`
+48. `git commit -m "merged changes"`
+49. `git push`
