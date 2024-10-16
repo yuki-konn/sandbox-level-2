@@ -149,7 +149,7 @@ rm -rf .git
 29. `git merge myBranch`
 30. Approve the merge by closing the merge editor or the VIM editor (type :qa and ENTER)
 31. `git rebase myBranch`
-32. `git push`
+32. `git push` (merged and rebased code)
 33. `git switch myBranch`
 34. `git rebase main`
 35. Add `<h1>About Page</h1>` to about.html
@@ -159,11 +159,11 @@ rm -rf .git
 39. `git switch main`
 40. Add `<h2>About Page</h2>` to about.html
 41. Save the changes CTRL + S
-42. `git add .`
+42. `git add .` (created a conflict)
 43. `git commit -m "added heading"`
 44. `git merge myBranch`
 45. Select a resolution.
 46. Save the changes CTRL + S
 47. `git add .`
 48. `git commit -m "merged changes"`
-49. `git push`
+49. `git push` (fixed a merge conflict)
