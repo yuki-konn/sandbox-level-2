@@ -1,4 +1,5 @@
 # GIT COMMANDS
+
 ### INSTALL GIT BASH
 
 1. Run the command `git --version`
@@ -35,6 +36,7 @@
 4. Copy the HTTPS link.
 
 ### PULL FROM GITHUB
+
 ```
 git init
 git remote add origin https://github.com/myRepositoryLink
@@ -54,8 +56,9 @@ git pull origin main
 5.  Do not change the default settings.
 
 ### PUSH TO GITHUB FOR THE FIRST TIME
+
 ```
-gh auth login 
+gh auth login
 git remote set-url origin https://github.com/myRepositoryLink2
 git add .
 git commit -m "added files"
@@ -63,6 +66,7 @@ git push --set-upstream origin main
 ```
 
 ### PUSH TO GITHUB REGULARLY
+
 ```
 git add .
 git commit -m "the changes I made"
@@ -78,6 +82,7 @@ git push
 `git config --global init.defaultBranch main`
 
 ### DELETE SOURCE CONTROL
+
 ```
 ls -a
 rm -rf .git
@@ -102,9 +107,14 @@ rm -rf .git
 1. Switch to the branch that will absorb the changes. Example `git switch main`
 2. `git merge myBranch`
 
+### USE VSCODE EDITOR INSTEAD OF VIM EDITOR
+
+`git config --global core.editor "code --wait"`
+
 ### COMMAND DESCRIPTIONS
+
 1. git init
-   - Initializes source control 
+   - Initializes source control
 2. git pull origin main
    - Copies files from the origin
 3. gh auth login
@@ -152,6 +162,9 @@ rm -rf .git
 32. `git push` (merged and rebased code)
 33. `git switch myBranch`
 34. `git rebase main`
+
+FIX A MERGE CONFLICT
+
 35. Add `<h1>About Page</h1>` to about.html
 36. Save the changes CTRL + S
 37. `git add .`
@@ -167,3 +180,36 @@ rm -rf .git
 47. `git add .`
 48. `git commit -m "merged changes"`
 49. `git push` (fixed a merge conflict)
+
+FIXING A REBASE CONFLICT
+
+50. `git rebase myBranch`
+51. Select a resolution.
+52. Save the changes CTRL + S
+53. `git add .`
+54. `git rebase --continue`
+55. `git push` (will result in an error)
+56. `git push --force`
+
+RESTORE A SAVE POINT
+
+57. Select a commit to restore.
+58. Copy its id
+59. `git reset --hard id123456789`
+60. `git push` (will result in an error)
+61. `git push --force`
+
+PUSH A BRANCH TO GITHUB
+
+62. `git push origin myBranch`
+
+DELETE A BRANCH
+
+63. `git branch --delete myBranch` (will result in error)
+64. `git branch -D myBranch` (force delete myBranch)
+65. `git branch`
+
+RESTORE A BRANCH FROM GITHUB
+
+66. `git branch myBranch origin/myBranch`
+67. `git branch`

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Form Inputs</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container">
+    <main>
+      <h1>Form Inputs</h1>
+      <hr />
+      <h2>Inputs</h2>
+      <h3>Buttons</h3>
+      <pre>
+        <button type="button">Click button</button>
+        <input type="button" value="Click button" />
+        <input type="submit" value="Add submission" />
+        <input type="reset" value="Reset form" />
+        <input type="image" src="images/submit-button.png" />
+        <input type="radio" /> Radio button
+        <input type="checkbox" /> Checkbox
+      </pre>
+
+      <h3>Text Inputs</h3>
+      <pre>
+        <input type="text" placeholder="Text input">
+        <input type="email" placeholder="Email input">
+        <input type="tel" placeholder="Phone number input">
+        <input type="number" placeholder="Number input">
+        <input type="password" placeholder="Password input">
+        <input type="search" placeholder="Search input">
+        <input type="url" placeholder="URL input">
+      </pre>
+
+      <h3>Interface</h3>
+      <pre>
+        <input type="file">
+        <input type="color"> Color picker
+        <input type="time">
+        <input type="week">
+        <input type="month"> Month picker
+        <input type="date">
+        <input type="datetime-local">
+        <input type="number" min="10" max="30"> Number range
+        <input type="range" min="1" max="10"> Number slider
+        <select>
+            <option>item 1</option>
+            <option>item 2</option>
+            <option>item 3</option>
+            <option selected>Dropdown</option>
+        </select>
+      </pre>
+
+      <hr />
+
+      <h2>Forms</h2>
+      <h3>Validation</h3>
+      <pre>
+        Forms can validate their input. 
+        Inputs are checked before being submitted.
+        Type invalid values to see form validation.
+      </pre>
+      <form>
+        <input type="email" placeholder="Email input" />
+        <input type="submit" />
+      </form>
+
+      <form>
+        <input required type="password" placeholder="Password Required" />
+        <button type="submit">Submit</button>
+      </form>
+
+      <form>
+        <input
+          type="text"
+          placeholder="Input length"
+          minlength="5"
+          maxlength="10"
+        />
+        <input type="submit" />
+      </form>
+
+      <form>
+        <input
+          type="tel"
+          placeholder="Phone number input"
+          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        />
+        <input type="submit" /> Format: ###-###-####
+      </form>
+    </main>
+  </body>
+</html>
