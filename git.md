@@ -128,25 +128,39 @@ rm -rf .git
 
 ### MERGE TEST
 
+INITIALIZE SOURCE CONTROL
+
 1. `git init`
 2. `git config user.name "myUserName"`
 3. `git config user.email "my@email.com"`
 4. `touch index.html`
 5. `git add .`
 6. `git commit -m "added files"`
+
+INITIALIZE THE REPOSITORY
+
 7. Create a GitHub repository called merge-test
 8. `git remote add origin https://github.com/yuki-konn/merge-test.git`
 9. `git push --set-upstream origin main`
+
+CREATE A BRANCH
+
 10. `git branch myBranch`
 11. `git switch myBranch`
 12. Add `<p>Hello World!</p>` to index.html
 13. Save the Changes CTRL + S
 14. `git add .`
 15. `git commit -m "updated files"`
+
+MERGE THE BRANCH
+
 16. `git switch main`
 17. Change the history from `Auto` to `All`.
 18. `git merge myBranch`
 19. `git push`
+
+SETUP FOR REBASE
+
 20. git switch myBranch
 21. Add `<p>Amazing World!</p>` to index.html
 22. Save the Changes CTRL + S
@@ -158,6 +172,9 @@ rm -rf .git
 28. `git commit -m "added a file"`
 29. `git merge myBranch`
 30. Approve the merge by closing the merge editor or the VIM editor (type :qa and ENTER)
+
+REBASE THE CONFLICTS
+
 31. `git rebase myBranch`
 32. `git push` (merged and rebased code)
 33. `git switch myBranch`

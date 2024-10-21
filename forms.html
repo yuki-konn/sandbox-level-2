@@ -8,6 +8,8 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <script src="utility-functions.js"></script>
+    <script src="forms.js"></script>
   </head>
   <body class="container">
     <main>
@@ -69,7 +71,7 @@
         <input type="submit" />
       </form>
 
-      <form>
+      <form onsubmit="processForm(event)">
         <input required type="password" placeholder="Password Required" />
         <button type="submit">Submit</button>
       </form>
@@ -92,6 +94,9 @@
         />
         <input type="submit" /> Format: ###-###-####
       </form>
+
+      <div id="outputTag"></div>
+      </script>
     </main>
   </body>
 </html>
