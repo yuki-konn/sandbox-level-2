@@ -49,19 +49,21 @@ The accessibility tree:
 3. `<footer>`
 4. headings
 5. `<p>`
-6. `<article>`
+6. `<label>`
+7. `<article>`
    - Use for blog posts, news articles, and other independent self-contained content.
    - Example: recipe cards
-7. `<section>`
+8. `<section>`
    - Use to enclose themes, categories, and content with headings.
    - Example: recipe ingredients, recipe instructions
-8. `<dialog>`
+9. `<dialog>`
    - Use for a box or window that can be opened or closed.
    - Example: Bootstrap alert
    - Note: Use the open attribute to show the `<dialog>` content.
-9. `<output>`
-   - Use this for the result of a calculation or showing feedback.
-   - Example: The form has been successfully submitted.
+10. `<output>`
+
+- Use this for the result of a calculation or showing feedback.
+- Example: The form has been successfully submitted.
 
 ### Semantic attributes
 
@@ -74,3 +76,7 @@ The accessibility tree:
    - type="tel"
 3. `role`
    - role="alert"
+4. `for` and `id`
+   - for="phone"
+   - id="phone"
+   - Example: `<input for="phone"> <label id="phone">Phone:</label>`

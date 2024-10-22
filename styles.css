@@ -1,0 +1,23 @@
+/* tag selectors */
+h1 {
+  color: red;
+}
+
+a {
+  display: block;
+}
+
+p {
+  display: inline;
+}
+
+img {
+  display: none;
+}
+
+/* class selectors */
+.green {
+  color: green;
+}
+
+/* id selectors */
