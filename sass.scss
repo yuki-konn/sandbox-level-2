@@ -1,0 +1,38 @@
+// CUSTOM COLORS
+$primaryFont: "Impact";
+$secondaryFont: sans-serif;
+
+@font-face {
+  font-family: "Impact";
+  src: url("impact.ttf");
+}
+
+main {
+  font-family: $primaryFont;
+}
+
+footer {
+  font-family: $secondaryFont;
+}
+
+h1 {
+  color: green;
+}
+
+p b {
+  color: blue;
+}
+
+pre {
+  code {
+    color: red;
+  }
+}
+
+$myColor: purple;
+
+pre {
+  i {
+    color: $myColor;
+  }
+}

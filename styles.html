@@ -2,43 +2,435 @@
 <html lang="en">
   <head>
     <title>CSS Styles</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header></header>
-    <main>
-      <h1>h1 tag</h1>
-      <a class="green">a tag</a>
-      <h2>Displays</h2>
+    <main class="gradient p-3">
+      <h1>CSS STYLES</h1>
+      <a>a tag</a>
+      <!-- Display Section -->
       <section>
-        <h3>Display: Block</h3>
-        <pre>
-            Puts elements on their own line.
-            The a tags are now block elements.
-            They have their own line.
-        </pre>
-        <a>a tag 1</a>
-        <a>a tag 2</a>
-        <a>a tag 3</a>
+        <h2>Displays</h2>
+        <!-- Display Type Section -->
+        <section>
+          <h3>Display: Block</h3>
+          <pre>
+            Display: Block;
+            - Puts elements on their own line.
+            - The a tags are now block elements.
+            - They have their own line.
+          </pre>
+          <a class="block">a tag 1</a>
+          <a class="block">a tag 2</a>
+          <a class="block">a tag 3</a>
+
+          <h3>Display: inline</h3>
+          <pre>
+            Display: inline;
+            - Makes elements in line.
+            - The p tags are now inline.
+          </pre>
+          <p class="inline">p tag 1</p>
+          <p class="inline">p tag 2</p>
+          <p class="inline">p tag 3</p>
+
+          <h3>Display: none</h3>
+          <pre>
+            Display: none;
+            - Makes the element invisible.
+            - But it's still in the Elements panel in developers tools.
+          </pre>
+          <img class="none" src="images/2d-shapes.jpg" alt="2d shapes" />
+        </section>
+        <!-- Background Section -->
+        <section>
+          <h3>Background Image</h3>
+          <pre>
+          Background image
+          - background-image: url("gudetama.png");
+          - Add the filename or URL for the image.
+          </pre>
+          <div class="gudetama w100 height">background image</div>
+
+          <h3>Resizing the background image</h3>
+          <pre>
+            Resizing the background image
+            background-size: 12%;
+            - 1 value sets the width and height proportionately.
+            - 2 values sets the width and height individually.
+          </pre>
+          <div class="size12 gudetama w100 height"></div>
+
+          <h3>Repeating a background</h3>
+          <pre>
+            Repeating a background
+            background-repeat: no-repeat;
+            - By default, the background repeats.
+          </pre>
+          <div class="no-repeat size12 gudetama w100 height"></div>
+
+          <pre>
+            Repeating a background
+            background-repeat: space;
+            - Repeats the background such that it doesn't get cut off.
+          </pre>
+          <div class="space size12 gudetama w100 height"></div>
+
+          <pre>
+            Repeating a background horizontally
+            background-repeat: space no-repeat;
+            - 1st value: horizontal repeat (x-direction)
+            - 2nd value: vertical repeat (y-direction)
+            - Values are separated by a space
+          </pre>
+          <div class="repeat-horizontal size12 gudetama w100 height"></div>
+
+          <pre>
+            Repeating a background vertically
+            background-repeat: no-repeat repeat;
+            - 1st value: horizontal repeat (x-direction)
+            - 2nd value: vertical repeat (y-direction)
+            - Values are separated by a space
+          </pre>
+          <div class="repeat-vertical size12 gudetama w100 height"></div>
+
+          <h3>Background Position</h3>
+          <pre>
+            Background positions
+            background-position: center;
+            - The choices are top, bottom, left, right, and center.
+          </pre>
+          <div class="bg-center no-repeat size12 gudetama w100 height"></div>
+
+          <pre>
+            Background positions
+            background-position: 20%;
+            - 1 value sets the x and y position the same
+          </pre>
+          <div class="bg-1value no-repeat size12 gudetama w100 height"></div>
+
+          <pre>
+            Background positions
+            background-position: 20% 30%;
+            - 2 values position x and y individually
+          </pre>
+          <div class="bg-offcenter no-repeat size12 gudetama w100 height"></div>
+
+          <h3>Adding multiple background images</h3>
+          <pre>
+          Adding multiple background image
+          background-image: url("gudetama.png");
+          background-image: linear-gradient(white, grey);
+          - Add background images to nesting elements.
+          - The elements nested deeply will appear in front.
+          </pre>
+          <div class="gradient-basic">
+            <div class="gudetama w100 height"></div>
+          </div>
+        </section>
+        <!-- Gradients Section -->
+        <section>
+          <div class="gradient-basic height">
+            <h3>Basic Gradient</h3>
+            <pre>
+              Basic Gradient
+              background-image: linear-gradient(white, grey);
+            </pre>
+          </div>
+          <div class="gradient-colors height">
+            <h3>Multiple Colors Gradient</h3>
+            <pre>
+              Multiple Colors Gradient
+              background-image: linear-gradient(white, grey, green);
+              - Add more colors by seperating them with a comma.
+            </pre>
+          </div>
+          <div class="gradient-direction height">
+            <h3>Gradient Directions</h3>
+            <pre>
+              Gradient Directions
+              background-image: linear-gradient(to bottom right, white, grey, green);
+              - To change the direction, put at the beginning:
+                to right
+                to bottom right
+                to left
+                to bottom left
+            </pre>
+          </div>
+          <div class="gradient-degree height">
+            <h3>Gradient Degrees</h3>
+            <pre>
+              Gradient Degrees
+              background-image: linear-gradient(90deg, white, grey, green);
+              - To change the direction, add degrees to the beginning:
+                90deg (right)
+                135deg (bottom right)
+                270deg (left)
+                225deg (bottom left)
+            </pre>
+          </div>
+
+          <div class="gradient-stops height">
+            <pre>
+              Gradient color stops
+              background-image: linear-gradient(90deg, blue, gold 10% 90%, blue);
+              - 2 values next to the middle color set solid color positions.
+              - separated by spaces
+            </pre>
+          </div>
+        </section>
+        <!-- RGBA Section -->
+        <section>
+          <h3>RGBA</h3>
+          <pre class="rgba gradient-basic">
+            RGBA
+            color: rgba(2, 99, 2, 0.459);
+            - Sets the transparency of colors
+            - Red Green Blue Alpha
+            - 0 alpha is invisible
+            - 1 alpha is fully visible
+          </pre>
+
+          <h3>Opacity</h3>
+          <pre>
+            Opacity
+            opacity: 0.25;
+            - Sets the transparency of elements
+            - 0 is invisible
+            - 1 is fully visible
+          </pre>
+          <div class="gradient-basic">
+            <img
+              class="opacity25"
+              src="images/gudetama.png"
+              alt="gudetama image"
+            />
+          </div>
+
+          <h3>Display: none VS Opacity: 0</h3>
+          <pre>
+            display: none; vs opacity: 0;
+            display: none;
+              - makes the element invisible
+              - removes the element from the browser
+              - the element is still in the element tree
+            opacity: 0;
+              - makes the element invisible
+              - does NOT remove the element from the browser
+              - the element still takes up space as it is still in the element tree
+          </pre>
+          <div class="border border-5 m-1">
+            <div class="none">Display: none</div>
+          </div>
+          <div class="border border-5 m-1">
+            <div class="opacity0">Opacity: 0</div>
+          </div>
+        </section>
       </section>
+
+      <hr />
+      <!-- Selector Section -->
       <section>
-        <h3>Display: inline</h3>
+        <h2>Selectors</h2>
+        <h3>Grouping Selector</h3>
         <pre>
-        Makes elements in line.
-        The p tags are now inline.
-      </pre
-        >
-        <p>p tag 1</p>
-        <p>p tag 2</p>
-        <p>p tag 3</p>
-      </section>
-      <section>
-        <h3>Display: none</h3>
-        <pre>
-            Makes the element invisible.
-            But it's still in the Elements panel in developers tools.
+          Grouping selector
+          .i-green, .b-green {
+            color: green;
+          }
+
+          - Seperate elements, classes, or IDs with commas.
+          - The grouping selector applies the style to all of those elements.
         </pre>
-        <img src="images/2d-shapes.jpg" alt="2d shapes" />
+        <i class="i-green">italic tag</i>
+        <b class="b-green">bold tag</b>
+        <i class="i-green">italic tag</i>
+        <b class="b-green">bold tag</b>
+
+        <h3>Nesting Selector</h3>
+        <pre>
+          Nesting selector
+          i b {
+            color: green;
+          }
+
+          - Select the nested elements(s)
+          Example: &lt;b&gt; is nested in &lt;i&gt;
+        </pre>
+        <i>
+          italic
+          <b>Inside the &lt;i&gt; tag</b>
+          italic
+          <b>Inside the &lt;i&gt; tag</b>
+          italic
+        </i>
+        <b>Not in the &lt;i&gt; tag</b>
+
+        <h3>Specificity</h3>
+        <pre>
+          Specificity
+          Styling priority
+          1. inline
+          2. id
+          3. class
+          4. element
+
+          - Styles are applied based on their specificity or priority.
+          - Styles with lower priority get overwritten.
+          - !important overwrites them all.
+          - !important goes by load order.
+          - The !important that gets loaded last gets applied.
+        </pre>
+        <b>Example:</b>
+        <article style="color: purple" id="red-italic" class="blue-bold">
+          <span style="color: black"
+            >Article with inline style black, id red-italic, and class
+            blue-bold.</span
+          >
+          <br />
+          inline > id > class > element
+        </article>
+        <article id="red-italic" class="blue-bold">
+          <span style="color: black">
+            Article with id red-italic, and class blue-bold. </span
+          ><br />
+          id > class > element
+        </article>
+        <article class="blue-bold">
+          <span style="color: black">Article with class blue-bold.</span><br />
+          class > element
+        </article>
+        <article>
+          <span style="color: black">Just article</span><br />
+          element
+        </article>
+      </section>
+      <hr />
+      <section>
+        <h2>Shorthand Property</h2>
+        <h3>Padding Shorthand Property</h3>
+        <pre>
+          Padding shorthand property
+          padding: 5px 6px 7px 8px;
+          - Padding gets appied in a clockwise direction when 4 values are specified.
+            1. top 
+            2. end (left)
+            3. bottom
+            4. start (right)
+
+          padding: 10px 20px;
+          - Providing 2 values specifies
+            1. top and bottom
+            2. left and right
+
+          padding: 10px 20px 30px;
+          - Providing 3 values specifies
+            1. top 
+            2. left and right
+            3. bottom
+        </pre>
+
+        <h3>Margin Shorthand Property</h3>
+        <pre>
+          Margin shorthand property
+          margin: 5px 6px 7px 8px;
+          - Margin gets appied in a clockwise direction when 4 values are specified.
+            1. top 
+            2. end (left)
+            3. bottom
+            4. start (right)
+
+          Margin: 10px 20px;
+          - Providing 2 values specifies
+            1. top and bottom
+            2. left and right
+
+          Margin: 10px 20px 30px;
+          - Providing 3 values specifies
+            1. top 
+            2. left and right
+            3. bottom
+        </pre>
+
+        <h3>Padding/Margin Long Hand</h3>
+        <pre>
+          padding-top: 5px;
+          padding-right: 7px;
+          padding-bottom: 9px;
+          padding left: 10px;
+          Note: this works the same for margins, just change the word.
+        </pre>
+      </section>
+      <hr />
+      <!-- Shadow Section -->
+      <section>
+        <h3>Box shadow</h3>
+        <pre>
+          Box shadow
+          box-shadow: 2px 2px gray;
+          1. x offset
+          2. y offset
+          3. color
+        </pre>
+        <span class="box-shadow bg-info m-5">Hello World!</span>
+
+        <h3>Text shadow</h3>
+        <pre>
+          Text shadow
+          text-shadow: 2px 2px gray;
+          1. x offset
+          2. y offset
+          3. color
+        </pre>
+        <span class="text-shadow m-5">Hello World!</span>
+      </section>
+      <hr />
+      <!-- Transformation Section -->
+      <section>
+        <h3>Transformations</h3>
+        <pre>
+          Transformations
+          transform: rotate(20deg);
+        </pre>
+        <button class="rotate btn btn-primary m-5">Click</button>
+
+        <pre>
+          Transformations
+          transform: translate(10px, -10px);
+        </pre>
+        <button class="translate btn btn-primary m-5">Click</button>
+
+        <pre>
+          Transformations
+          transform: scale(2);
+          - Decimal values make the element smaller.
+          - Integers increase the size of the element
+        </pre>
+        <button class="scale btn btn-primary m-5">Click</button>
+
+        <pre>
+          Transformations
+          transform: scale(2) rotate(20deg);
+          Aplly multiple transformations seperated by spaces.
+        </pre>
+        <button class="scale-rotate btn btn-primary m-5">Click</button>
+
+        <pre>
+          Transitions (animations)
+          transition: 2s;
+          - 1st value is style of the animation.
+          - 2nd value is the duration of the animation.
+
+          Set an animation for the original state (not scaled or rotated) to prevent snap-back.
+        </pre>
+        <button class="animation btn btn-primary m-5">Click</button>
       </section>
     </main>
     <footer></footer>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SASS</title>
+    <link rel="stylesheet" href="sass.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <!-- Did all this in class 10/28 -->
+      <h1>SASS</h1>
+      <p>Syntactically <b>Awesome</b> Style Sheets</p>
+      <pre>
+        SASS <code>nesting</code> syntax
+        pre {
+             code {
+              color: red;
+            }
+          }
+        A style can be nested in another style to select a nested element
+    </pre
+      >
+      <pre>
+        SASS <i>variable</i> syntax
+
+        $myColor: purple;
+        pre {
+            i {
+                color: $myColor;
+            }
+        }
+
+        SASS variables start with $
+        Use colon to store a value
+        Use the variable name to access the value
+      </pre>
+      <!-- 10/30 -->
+      <pre>
+        Parent syntax
+        -------------------
+        <code>
+          h1 {
+            color: $darkGreen;
+            width: fit-content;
+
+            &:hover {
+              color: $darkRed;
+            }
+          }
+        </code>
+        Groups styles together under the parent selector
+        Use <code>&</code> to substitute for the parent.
+        Any style belonging to the parent will be passed to the child styles.
+       </pre>
+
+      <pre>
+        Font variables
+        -------------------
+        <code>
+          $primaryFont: sans-serif;
+          $secondaryFont: fantasy;
+        </code>
+        Use variables to store fonts.
+        Single source of truth.
+      </pre>
+
+      <pre>
+        Adding fonts
+        -------------------
+        <code>
+          @font-face {
+            font-family: "Impact";
+            src: url("impact.ttf");
+          }
+        </code>
+        1. Download the font https://www.dafont.com/
+        2. If the font is in a .zip, move the font out to a root folder.
+        3. Use <code>@font-face</code> to add the font.
+        4. Use <code>font-family</code> to name the font.
+        5. Use <code>src: url()</code> to link the font file.
+        6. Use the font name.
+       </pre>
+    </main>
+    <footer>Hello Footer</footer>
+  </body>
+</html>

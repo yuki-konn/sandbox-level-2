@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Impact";
+  src: url("impact.ttf");
+}
+main {
+  font-family: "Impact";
+}
+
+footer {
+  font-family: sans-serif;
+}
+
+h1 {
+  color: green;
+}
+
+p b {
+  color: blue;
+}
+
+pre code {
+  color: red;
+}
+
+pre i {
+  color: purple;
+}

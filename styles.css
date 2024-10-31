@@ -3,21 +3,185 @@ h1 {
   color: red;
 }
 
-a {
-  display: block;
+/* class selectors */
+.rgba {
+  color: rgba(2, 99, 2, 0.459);
 }
 
-p {
+/* DISPLAY SECTION */
+.inline {
   display: inline;
 }
 
-img {
+.block {
+  display: block;
+}
+
+.none {
   display: none;
 }
 
-/* class selectors */
-.green {
+.gudetama {
+  background-image: url(images/gudetama.png);
+}
+
+.size12 {
+  background-size: 12%;
+}
+
+.no-repeat {
+  background-repeat: no-repeat;
+}
+
+.space {
+  background-repeat: space;
+}
+
+.repeat-horizontal {
+  background-repeat: space no-repeat;
+}
+
+.repeat-vertical {
+  background-repeat: no-repeat repeat;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-offcenter {
+  background-position: 20% 30%;
+}
+
+.bg-1value {
+  background-position: 20%;
+}
+
+.gradient {
+  background-image: linear-gradient(to bottom left, skyblue, white, darkgrey);
+}
+
+.gradient-basic {
+  background-image: linear-gradient(white, grey);
+}
+
+.gradient-colors {
+  background-image: linear-gradient(white, grey, green);
+}
+
+.gradient-direction {
+  background-image: linear-gradient(to bottom right, white, grey, green);
+}
+
+.gradient-degree {
+  background-image: linear-gradient(225deg, white, grey, green);
+}
+
+.gradient-stops {
+  background-image: linear-gradient(90deg, blue, gold 10% 90%, blue);
+}
+
+.w100 {
+  width: 100%;
+}
+.height {
+  height: 200px;
+}
+
+.opacity25 {
+  opacity: 0.25;
+}
+.opacity0 {
+  opacity: 0;
+}
+/*  */
+
+/* SELECTOR SECTION */
+.i-green,
+.b-green {
   color: green;
 }
 
-/* id selectors */
+i b {
+  color: green;
+}
+
+#red-italic {
+  color: red;
+  font-style: italic;
+}
+
+.blue-bold {
+  color: blue;
+  font-weight: bold;
+}
+
+article {
+  /* color: green !important; can make element selector the top priority. */
+  color: green;
+  font-weight: bold;
+}
+
+/* Can make element selector the top priority. 
+article {
+  color: sandybrown !important;
+}
+*/
+/*  */
+
+/* Border Important Styles */
+.border-dashed {
+  border-style: dashed !important;
+}
+.border-dotted {
+  border-style: dotted !important;
+}
+.border-double {
+  border-style: double !important;
+}
+.border-groove {
+  border-style: groove !important;
+}
+.border-ridge {
+  border-style: ridge !important;
+}
+.border-inset {
+  border-style: inset !important;
+}
+.border-outset {
+  border-style: outset !important;
+}
+/*  */
+
+.box-shadow {
+  box-shadow: 2px 2px gray;
+}
+
+.text-shadow {
+  text-shadow: 1px 1px gray;
+}
+
+.rotate:hover {
+  transform: rotate(20deg);
+}
+
+.translate:hover {
+  transform: translate(10px, -10px);
+}
+.scale:hover {
+  transform: scale(2);
+}
+
+.scale-rotate:hover {
+  transform: scale(2) rotate(20deg);
+}
+
+.animation:hover {
+  transform: scale(2) rotate(20deg);
+  transition: 2s;
+}
+
+.animation {
+  transform: scale(1) rotate(0deg);
+  transition: 1s;
+}
