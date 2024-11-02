@@ -1,3 +1,41 @@
+p {
+  color: red;
+}
+
+#mixin-example {
+  box-shadow: 5px 5px grey;
+  text-shadow: 3px 3px rgb(67, 67, 67);
+}
+
+#mixin-button {
+  transform: scale(1) rotate(0deg);
+  transition: transform 1s;
+}
+#mixin-button:hover {
+  transform: scale(2) rotate(15deg);
+  transition: transform 2s;
+}
+
+#animated-button {
+  transform: scale(1) rotate(0deg);
+  transition: transform 1s;
+}
+#animated-button:hover {
+  transform: scale(0.5) rotate(-10deg);
+  transition: transform 2s;
+}
+
+#subtitle {
+  width: -moz-fit-content;
+  width: fit-content;
+  transform: scale(1) rotate(0deg);
+  transition: transform 1s;
+}
+#subtitle:hover {
+  transform: scale(0.5) rotate(-10deg);
+  transition: transform 2s;
+}
+
 @font-face {
   font-family: "Impact";
   src: url("impact.ttf");
@@ -11,17 +49,58 @@ footer {
 }
 
 h1 {
-  color: green;
+  color: rgb(0, 95, 0);
+  width: -moz-fit-content;
+  width: fit-content;
+}
+h1:hover {
+  color: rgb(140, 0, 0);
 }
 
 p b {
-  color: blue;
+  color: rgb(70, 70, 255);
 }
 
 pre code {
-  color: red;
+  color: rgb(140, 0, 0);
 }
 
 pre i {
   color: purple;
+}
+
+.bg-image {
+  background-image: url(images/gudetama.png);
+}
+
+.horizontalRepeat {
+  background-repeat: space no-repeat;
+}
+
+.verticalRepeat {
+  background-repeat: no-repeat repeat;
+}
+
+.width {
+  width: 100vw;
+}
+
+.height {
+  height: 200px;
+}
+
+.size12 {
+  background-size: 12%;
+}
+
+.size20 {
+  background-size: 20%;
+}
+
+.stretch {
+  background-size: 25% 100%;
+}
+
+.gradient {
+  background-image: linear-gradient(90deg, gray, white 10% 90%, gray);
 }

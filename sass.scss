@@ -1,6 +1,68 @@
 // CUSTOM COLORS
+$purple: purple;
+$darkGreen: rgba(0, 95, 0, 1);
+$lightBlue: rgba(70, 70, 255, 1);
+$darkRed: rgba(140, 0, 0, 1);
+
+// CUSTOM FONTS
 $primaryFont: "Impact";
 $secondaryFont: sans-serif;
+
+// MIXINS
+// SINGLE LINE MIXINS
+@mixin redText {
+  color: red;
+}
+@mixin boxShadow {
+  box-shadow: 5px 5px grey;
+}
+@mixin textShadow {
+  text-shadow: 3px 3px rgb(67, 67, 67);
+}
+// MULTILINE MIXIN
+@mixin animation1 {
+  transform: scale(1) rotate(0deg);
+  transition: transform 1s;
+}
+@mixin animation2 {
+  transform: scale(2) rotate(15deg);
+  transition: transform 2s;
+}
+@mixin animation {
+  transform: scale(1) rotate(0deg);
+  transition: transform 1s;
+
+  &:hover {
+    transform: scale(0.5) rotate(-10deg);
+    transition: transform 2s;
+  }
+}
+
+p {
+  @include redText;
+}
+
+#mixin-example {
+  @include boxShadow;
+  @include textShadow;
+}
+
+#mixin-button {
+  @include animation1;
+
+  &:hover {
+    @include animation2;
+  }
+}
+
+#animated-button {
+  @include animation;
+}
+
+#subtitle {
+  width: fit-content;
+  @include animation;
+}
 
 @font-face {
   font-family: "Impact";
@@ -16,23 +78,69 @@ footer {
 }
 
 h1 {
-  color: green;
+  color: $darkGreen;
+  width: fit-content;
+
+  &:hover {
+    color: $darkRed;
+  }
 }
 
 p b {
-  color: blue;
+  color: $lightBlue;
 }
 
 pre {
   code {
-    color: red;
+    color: $darkRed;
   }
 }
 
-$myColor: purple;
-
 pre {
   i {
-    color: $myColor;
+    color: $purple;
   }
+}
+
+$gudetama: url(images/gudetama.png);
+.bg-image {
+  background-image: $gudetama;
+}
+
+$horizontalRepeat: space no-repeat;
+.horizontalRepeat {
+  background-repeat: $horizontalRepeat;
+}
+
+$verticalRepeat: no-repeat repeat;
+.verticalRepeat {
+  background-repeat: $verticalRepeat;
+}
+
+.width {
+  width: 100vw;
+}
+
+.height {
+  height: 200px;
+}
+
+.size12 {
+  background-size: 12%;
+}
+
+.size20 {
+  background-size: 20%;
+}
+
+$stretch: 25% 100%;
+.stretch {
+  background-size: $stretch;
+}
+
+$darkGradient: linear-gradient(90deg, gray, black 10% 90%, gray);
+$lightGradient: linear-gradient(90deg, gray, white 10% 90%, gray);
+.gradient {
+  background-image: $lightGradient;
+  // background-image: $darkGradient;
 }
