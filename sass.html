@@ -11,11 +11,12 @@
     <link rel="stylesheet" href="sass.css" />
   </head>
   <body class="container">
-    <header></header>
-    <main>
-      <!-- Did all this in class 10/28 -->
+    <header>
       <h1>SASS</h1>
       <p>Syntactically <b>Awesome</b> Style Sheets</p>
+    </header>
+    <main>
+      <!-- 10/28 -->
       <pre>
         SASS <code>nesting</code> syntax
         -----------------------------------
@@ -28,7 +29,7 @@
         </code>
         A style can be nested in another style to select a nested element
       </pre>
-
+      <hr />
       <pre>
         SASS <i>variable</i> syntax
         -----------------------------------
@@ -44,6 +45,7 @@
         Use colon to store a value
         Use the variable name to access the value
       </pre>
+      <hr />
       <!-- 10/29 -->
       <pre>
         Background image variable
@@ -56,6 +58,7 @@
         </code>
       </pre>
       <div class="bg-image size20 width height"></div>
+      <hr />
 
       <pre>
         Horizontal repeat variable
@@ -68,6 +71,7 @@
         </code>
       </pre>
       <div class="horizontalRepeat bg-image size12 width height"></div>
+      <hr />
 
       <pre>
         Vertical repeat variable
@@ -80,6 +84,7 @@
         </code>
       </pre>
       <div class="verticalRepeat bg-image size12 width height"></div>
+      <hr />
 
       <pre>
         Background size variable
@@ -92,6 +97,7 @@
         </code>
       </pre>
       <div class="stretch bg-image width height"></div>
+      <hr />
 
       <div class="gradient width height">
         <pre>
@@ -106,6 +112,7 @@
           </code>
         </pre>
       </div>
+      <hr />
       <!-- 10/30 -->
       <pre>
         RGBA color variables
@@ -123,6 +130,7 @@
         Single source of truth - changing 1 thing changes them all. 
         Single line comments // CUSTOM COLORS SASS supports single line comments like JavaScript.
       </pre>
+      <hr />
 
       <pre>
         Single line comments
@@ -143,6 +151,7 @@
         The hit box of the block element is reduced.
         Compare it with <code>display: inline</code> which lines up the elements. 
       </pre>
+      <hr />
 
       <pre>
         Parent syntax
@@ -161,6 +170,7 @@
         Use <code>&</code> to substitute for the parent.
         Any style belonging to the parent will be passed to the child styles.
       </pre>
+      <hr />
 
       <pre>
         Font variables
@@ -172,6 +182,7 @@
         Use variables to store fonts.
         Single source of truth.
       </pre>
+      <hr />
 
       <pre>
         Adding fonts
@@ -189,6 +200,7 @@
         5. Use <code>src: url()</code> to link the font file.
         6. Use the font name.
       </pre>
+      <hr />
 
       <!-- 11/2 -->
       <pre>
@@ -212,6 +224,19 @@
       <p>This is a paragraph</p>
       <span class="bg-primary p-3" id="mixin-example">Mixin Example</span>
       <br /><br />
+      <hr />
+      <pre>
+        Using multiple mixins
+        -----------------------------------
+        <code>
+        #mixin-example {
+          @include boxShadow;
+          @include textShadow;
+        }
+        </code>
+        Use @include to use multiple mixins.
+      </pre>
+      <hr />
       <pre>
         SASS mixins- multi line
         -----------------------------------
@@ -237,6 +262,7 @@
         A multi-line mixin stores multiple properties and values.
       </pre>
       <button class="btn btn-success" id="mixin-button">Click!</button>
+      <hr />
 
       <pre>
         SASS mixin - all in one
@@ -262,6 +288,7 @@
       </pre>
       <button class="btn btn-primary" id="animated-button">AIO</button>
       <h2 class="bg-warning" id="subtitle">Here's an h2</h2>
+      <hr />
     </main>
     <footer>Hello Footer</footer>
   </body>

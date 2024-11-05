@@ -94,13 +94,16 @@ pre {
   code {
     color: $darkRed;
   }
-}
-
-pre {
   i {
     color: $purple;
   }
 }
+
+// pre {
+//   i {
+//     color: $purple;
+//   }
+// }
 
 $gudetama: url(images/gudetama.png);
 .bg-image {
