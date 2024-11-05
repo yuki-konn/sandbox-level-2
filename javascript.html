@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Javascript</title>
+    <link rel="stylesheet" href="javascript.css" />
+    <script src="javascript.js"></script>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <!-- 11/4 -->
+      <section>
+        <h2>Functions</h2>
+        <pre>
+          Activator function
+          -----------------------------------
+          <code>
+          function greeting() {
+          display("Hello World!");
+          }
+          </code>
+          A function that doesn't have parameters.
+          Its only purpose is to call a function with parameters.
+
+          <button onclick="greeting()">Activate me!</button>
+        </pre>
+
+        <pre>
+          Callback function
+          -----------------------------------
+          <code>
+          function myFunction(callbackFunction) {
+            callbackFunction();
+          }
+          function activator() {
+            myFunction(greeting);
+          }
+          activator();
+          </code>
+          A function that is passed as parameter.
+          A function can be passed to another function.
+          The function can run that function.
+
+          <button onclick="activator()">Callback</button>
+        </pre>
+
+        <pre>
+          setTimeout
+          -----------------------------------
+          <code>
+          setTimeout(greeting, 5000);
+          </code>
+          A function that calls a function after a specified time.
+          It accepts a function and a delay time in milliseconds.
+
+          <button onclick="delayedGreeting()">Delayed greeting</button>
+        </pre>
+
+        <pre>
+          Asynchronous
+          -----------------------------------
+          <code>
+          function asynchronous() {
+            setTimeout(greeting, 5000);
+            display("Waiting for the greeting... ");
+          }
+          </code>
+          Able to run other code while waiting for some code to respond.
+          Like multitasking.
+
+          How it works:
+          1. Other code runs immediately after <code>SetTimeout</code>.
+          2. The <code>greeting</code> function runs after the other code.
+
+          <button onclick="asynchronous()">Delayed greeting</button>
+        </pre>
+
+        <pre>
+          Server simulation
+          -----------------------------------
+          <code>
+          setTimeout(serverResponse, 5000);
+          </code>
+          A server takes time to respond.
+          Use asynchronous code to simulate it.
+          <form onsubmit="submitForm(event)">
+            <label for="email">Email: </label><br />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="myemail@email.com"
+              required
+            /><br />
+            <input type="submit" />
+          </form>
+        </pre>
+
+        <pre>
+          JSON stringify
+          -----------------------------------
+          <code>
+          function displayObject() {
+            const myCar = {
+              color: "red",
+              year: 2024,
+            };
+          
+            const result = JSON.stringify(myCar);
+            display(result);
+          }
+          </code>
+          Converts an object into a string.
+          Need to store the result.
+
+          JSON - JavaScript Object Notation
+          The syntax we use to represent objects.
+          - Curly braces represent an object.
+          - Properties are seperated by a comma.
+          - Properties are in quotes.
+          - Values are set with a colon.
+
+          <button onclick="displayObject()">Display object</button>
+        </pre>
+
+        <pre>
+          -----------------------------------
+          <code></code>
+          <button></button>
+        </pre>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
