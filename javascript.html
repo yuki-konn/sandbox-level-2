@@ -12,7 +12,7 @@
       <section>
         <h2>Functions</h2>
         <pre>
-          Activator function
+          <b>Activator function</b>
           -----------------------------------
           <code>
           function greeting() {
@@ -26,7 +26,7 @@
         </pre>
 
         <pre>
-          Callback function
+          <b>Callback function</b>
           -----------------------------------
           <code>
           function myFunction(callbackFunction) {
@@ -45,7 +45,7 @@
         </pre>
 
         <pre>
-          setTimeout
+          <b>setTimeout</b>
           -----------------------------------
           <code>
           setTimeout(greeting, 5000);
@@ -57,7 +57,7 @@
         </pre>
 
         <pre>
-          Asynchronous
+          <b>Asynchronous</b>
           -----------------------------------
           <code>
           function asynchronous() {
@@ -76,7 +76,7 @@
         </pre>
 
         <pre>
-          Server simulation
+          <b>Server simulation</b>
           -----------------------------------
           <code>
           setTimeout(serverResponse, 5000);
@@ -97,7 +97,7 @@
         </pre>
 
         <pre>
-          JSON stringify
+          <b>JSON stringify</b>
           -----------------------------------
           <code>
           function displayObject() {
@@ -110,10 +110,11 @@
             display(result);
           }
           </code>
-          Converts an object into a string.
+          Generates a string from an object.
           Need to store the result.
 
           JSON - JavaScript Object Notation
+          Servers communicate with stringified objects.
           The syntax we use to represent objects.
           - Curly braces represent an object.
           - Properties are seperated by a comma.
@@ -123,11 +124,82 @@
           <button onclick="displayObject()">Display object</button>
         </pre>
 
+        <!-- 11/6 -->
         <pre>
+          <b>JavaScript class</b>
+          -----------------------------------
+          <code>
+          class MyCar {
+            color = "red";
+            year = 2024;
+          }
+          </code>
+          A JavaScript class is like a template.
+          It predefines an object without creating it.
+          Ususally created towards the top of a JavaScript file.
+
+          Class syntax:
+          1. Keyword <code>class</code>
+          2. Class name, usually in PascalCase.
+             - PascalCase is like camelCase, but starts with a capital.
+          3. Curly braces
+          4. Assign properties their values.
+             - Use equal signs and semi-colons.
+        </pre>
+
+        <pre>
+          <b>JavaScript class vs object</b>
+          -----------------------------------
+          
+          <code>
+          class MyCar {
+            color = "red";
+            year = 2024;
+          }
+          
+          const myCar = {
+            color: "red",
+            year: 2024,
+          };
+          </code>
+          Directly displaying a class shows its code.
+          In developer tools, a class has a name and length.
+          The JavaScript class is different from a JavaScript object.
+          The syntax of a class is different than an object.
+
+          <button onclick="classVsObject()">class vs object</button>
+        </pre>
+
+        <pre>
+          <b>Create a new object from a class</b>
+          -----------------------------------
+          <code>
+          const myCar = new MyCar();
+          const myCar2 = new MyCar();
+          const myCar3 = new MyCar();
+
+          myCar2.color = "white";
+          myCar3.year = 2025;
+          </code>
+          The objects have the properties and values defined by the class.
+          The objects are independent.
+          - The values of their properties can be changed individually.
+
+          Syntax:
+          1. Keyword <code>new</code>
+          2. Name of the class with parenthesis after it.
+          3. Store the value.
+             - The value is an object created from the class.
+
+          <button onclick="newObject()">Create object from class</button>
+        </pre>
+
+        <!-- <pre>
+          <b></b>
           -----------------------------------
           <code></code>
           <button></button>
-        </pre>
+        </pre> -->
       </section>
     </main>
     <footer></footer>

@@ -1,8 +1,45 @@
+class MyCar {
+  color = "red";
+  year = 2024;
+}
+
+function newObject() {
+  debugger;
+  const myCar = new MyCar();
+  const myCar2 = new MyCar();
+  const myCar3 = new MyCar();
+
+  myCar2.color = "white";
+  myCar3.year = 2025;
+
+  display(JSON.stringify(myCar));
+  display(JSON.stringify(myCar2));
+  display(JSON.stringify(myCar3));
+}
+
+function classVsObject() {
+  class MyCar {
+    color = "red";
+    year = 2024;
+  }
+
+  const myCar = {
+    color: "red",
+    year: 2024,
+  };
+
+  debugger;
+
+  display(MyCar);
+  display(myCar);
+}
+
 function display(message) {
   document.write(message);
 }
 // Activator function
 function greeting() {
+  debugger;
   display("Hello World!");
 }
 
