@@ -73,6 +73,7 @@ function submitForm(event) {
 }
 
 function serverResponse() {
+  debugger;
   display("Form was successfully processed.");
 }
 
@@ -84,4 +85,44 @@ function displayObject() {
 
   const result = JSON.stringify(myCar);
   display(result);
+}
+
+// Promise
+function myFunction(resolve) {
+  debugger;
+  setTimeout(serverResponse, 5000);
+  display("Inside myFunction");
+
+  function serverResponse() {
+    debugger;
+    display("Form was successfully processed.");
+    resolve("The promise is fulfilled.");
+  }
+}
+
+function makePromise() {
+  debugger;
+  const promise = new Promise(myFunction);
+  promise.then(getMessage);
+  display("Made a promise.");
+}
+
+function getMessage(resolveValue) {
+  debugger;
+  display(resolveValue);
+}
+
+function activatorTest(myParameter) {
+  debugger;
+  display(myParameter);
+}
+
+function outerFunction() {
+  debugger;
+  const message = "Message from the outer function.";
+  innerFunction();
+
+  function innerFunction() {
+    display(message);
+  }
 }

@@ -22,7 +22,12 @@
           A function that doesn't have parameters.
           Its only purpose is to call a function with parameters.
 
-          <button onclick="greeting()">Activate me!</button>
+          Test results:
+          A value can be sent to functions without parameters.
+          Add a parameter to the function to access the value.
+
+          <button onclick="greeting()">Activate me!</button><br>
+          <button onclick="activatorTest('Hello world!')">Activator test</button>
         </pre>
 
         <pre>
@@ -194,12 +199,97 @@
           <button onclick="newObject()">Create object from class</button>
         </pre>
 
-        <!-- <pre>
+        <!-- 11/7 -->
+        <pre>
+          <b>Function in a function (nested function)</b>
+          -----------------------------------
+          <code>
+          function outerFunction() {
+            const message = "Hello world!";
+            innerFunction();
+          
+            function innerFunction() {
+              display(message);
+            }
+          }
+          </code>
+          Functions can be defined in other functions.
+          The inner function has access to variables in the outer function.
+          The inner function only runs when it's activated.
+
+          <button onclick="outerFunction()">Nested function</button>
+        </pre>
+
+        <pre>
+          <b>Promise</b>
+          -----------------------------------
+          <code>
+          const promise = new Promise(myFunction);
+          promise.then(getMessage);
+          </code>
+          A special class that runs a callback function.
+          The object indicates that status of the callback function.
+          A Promise is not asynchronous. It immediately runs the callback function.
+          Status shows pending, even after myFunction has finished.
+          The status must be manually changed.
+
+          The callback function must indicate when it has finished.
+          The Promise sends a callback function to the <code>myFunction</code>.
+          That callback function to <code>myFunction</code> indicates that the Promise is fulfilled.
+          The callback function is known as the <code>resolve</code> function.
+
+          A Promise is meant to be used by asynchronous code.
+          The asynchronous code is supposed to <code>resolve</code> indicate when it's done.
+
+          <button onclick="makePromise()">Make promise</button>
+        </pre>
+
+        <pre>
+          <b>Promise function</b>
+          -----------------------------------
+          <code>
+          function myFunction(resolve) {
+            setTimeout(serverResponse, 5000);
+            display("Inside myFunction");
+          
+            function serverResponse() {
+              display("Form was successfully processed.");
+              resolve();
+            }
+          }
+          </code>
+          Use an inner function to give access to the resolve function.
+        </pre>
+
+        <pre>
+          <b>The then function</b>
+          -----------------------------------
+          <code>
+          promise.then(getMessage);
+
+          function getMessage(resolveValue) {
+            display(resolveValue);
+          }
+          </code>
+          The then function runs the callback function when the promise is resolved(fulfilled).
+          The callback function has access to the resolve value.
+        </pre>
+
+        <pre>
+          <b>Resolve value</b>
+          -----------------------------------
+          <code>
+          resolve("The promise is fulfilled.");
+          </code>
+          The resolve value gets passed to the callback of the <code>then</code> function.
+        </pre>
+
+        <pre>
           <b></b>
           -----------------------------------
           <code></code>
           <button></button>
-        </pre> -->
+        </pre>
       </section>
     </main>
     <footer></footer>
