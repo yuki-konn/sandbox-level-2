@@ -215,6 +215,7 @@
           </code>
           Functions can be defined in other functions.
           The inner function has access to variables in the outer function.
+          Function scope (local scope) gives access to the variables.
           The inner function only runs when it's activated.
 
           <button onclick="outerFunction()">Nested function</button>
@@ -271,24 +272,76 @@
             display(resolveValue);
           }
           </code>
-          The then function runs the callback function when the promise is resolved(fulfilled).
+          The <code>then</code> function runs the callback function when the promise is resolved(fulfilled).
           The callback function has access to the resolve value.
         </pre>
 
         <pre>
-          <b>Resolve value</b>
+          <b>Resolve function and resolve value</b>
           -----------------------------------
           <code>
           resolve("The promise is fulfilled.");
           </code>
+          The resolve function is a callback function.
+          It is passed to the function that is given to the Promise.
+          It indicates that the Promise is fulfilled.
+          The resolve function is meant to be used by asynchronous code.
           The resolve value gets passed to the callback of the <code>then</code> function.
+        </pre>
+        <!-- 11/9 -->
+        <pre>
+          <b>Method</b>
+          -----------------------------------
+          <code>
+          promise.then(getMessage);
+          document.write("Hello World!");
+          </code>
+          A function that's part of an object.
+        </pre>
+
+        <!-- 11/9 slide 78 -->
+        <pre>
+          <b>Handler</b>
+          -----------------------------------
+          <code>
+          onsubmit="submitForm(event)"
+          </code>
+          A handler is a function that runs in response to an event.
+          Another example is <code>onclick</code> which can run a function in response to an event.
+
+          Example events:
+          1. When a form is submitted.
+          2. When a button is clicked.
         </pre>
 
         <pre>
-          <b></b>
+          <b>Handler naming convention</b>
           -----------------------------------
-          <code></code>
-          <button></button>
+          <code>
+          onsubmit="handleSubmit(event)"
+          onclick="handleClick(event)"
+          </code>
+          A handler function usually starts with <code>handle</code>.
+        </pre>
+
+        <pre>
+          Server Simulation with Promise
+          -----------------------------------
+          <form onsubmit="handleSubmit(event)">
+            <label for="email">Email: </label><br />
+            <input id="email" name="email" type="email" required /><br />
+            <input type="submit" />
+          </form>
+        </pre>
+
+        <pre>
+          <b>JSON parse</b>
+          -----------------------------------
+          <code>
+          const response = JSON.parse(resolveValue);
+          </code>
+          Parse: Analyze the data and convert it to a usable format.
+          <code>JSON.parse</code> converts a string into an object.
         </pre>
       </section>
     </main>

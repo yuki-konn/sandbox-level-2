@@ -126,3 +126,35 @@ function outerFunction() {
     display(message);
   }
 }
+
+// 11/9
+function handleSubmit(event) {
+  debugger;
+  event.preventDefault();
+  const inputs = event.target;
+  const emailInput = inputs[0];
+  const email = emailInput.value;
+  display("Submitting form for " + email + "... ");
+
+  const promise = new Promise(getServerResponse);
+  promise.then(parseResponse);
+}
+
+function getServerResponse(resolve) {
+  debugger;
+  setTimeout(activateResolve, 5000);
+  function activateResolve() {
+    const response = {
+      message: "Successfully processed.",
+    };
+    const resolveValue = JSON.stringify(response);
+    resolve(resolveValue);
+  }
+}
+
+function parseResponse(resolveValue) {
+  debugger;
+  const response = JSON.parse(resolveValue);
+  const message = response.message;
+  display(message);
+}
