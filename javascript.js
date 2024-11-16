@@ -135,8 +135,7 @@ function handleSubmit(event) {
   const emailInput = inputs[0];
   const email = emailInput.value;
   display("Submitting form for " + email + "... ");
-
-  const promise = new Promise(getServerResponse);
+  const promise = makeRequest("https://myserver.com"); // PROMISE BEST PRACTICE
   promise.then(parseResponse);
 }
 
@@ -144,6 +143,7 @@ function getServerResponse(resolve) {
   debugger;
   setTimeout(activateResolve, 5000);
   function activateResolve() {
+    // STIMULATE A SERVER BY SENDING A STRINGIFIED OBJECT
     const response = {
       message: "Successfully processed.",
     };
@@ -157,4 +157,11 @@ function parseResponse(resolveValue) {
   const response = JSON.parse(resolveValue);
   const message = response.message;
   display(message);
+}
+
+// 11/12
+// PROMISE BEST PRACTICE
+function makeRequest(url) {
+  const promise = new Promise(getServerResponse);
+  return promise;
 }

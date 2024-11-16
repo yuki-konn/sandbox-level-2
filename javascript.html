@@ -288,6 +288,18 @@
           The resolve function is meant to be used by asynchronous code.
           The resolve value gets passed to the callback of the <code>then</code> function.
         </pre>
+        <!-- 11/12 -->
+        <pre>
+          <b>Promise - Best practices</b>
+          -----------------------------------
+          <code>
+          function myPromise() {
+            const promise = new Promise(getServerResponse);
+            return promise;
+          }
+          </code>
+          A promise is usually a the return value of a function.
+         </pre>
         <!-- 11/9 -->
         <pre>
           <b>Method</b>
@@ -325,13 +337,14 @@
         </pre>
 
         <pre>
-          Server Simulation with Promise
+          <b>Server Simulation with Promise</b>
           -----------------------------------
           <form onsubmit="handleSubmit(event)">
             <label for="email">Email: </label><br />
             <input id="email" name="email" type="email" required /><br />
             <input type="submit" />
           </form>
+          Communication with a server is called a request.
         </pre>
 
         <pre>
