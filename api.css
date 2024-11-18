@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Impact";
+  src: url("res/fonts/Impact.ttf");
+}
+body {
+  background-color: rgb(29, 29, 29);
+  color: rgb(255, 255, 255);
+  font-family: "Impact";
+}
+body h2 {
+  color: rgb(128, 0, 187);
+}
+body pre b {
+  color: rgb(255, 196, 0);
+}
+body pre code {
+  color: rgb(0, 189, 214);
+}
+
+.w70 {
+  width: 70%;
+}
